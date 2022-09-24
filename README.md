@@ -43,4 +43,8 @@ This orb aims to treat documentation as a first-class citizen, similar to produc
 
 # License
 
+<<<<<<< HEAD
 [MIT](./LICENSE)
+=======
+[MIT](./LICENSE)
+>>>>>>> 960bbf0 (transfer)
