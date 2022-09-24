@@ -4,7 +4,7 @@
 
 Find stale documentation through CI.
 
-`stale.md` is a CircleCI orb that identifies stale documentation (ie 90 days of unchanged `.md` file) and warns developers on maintaining their documentation.
+`stale-md` is a CircleCI orb that identifies stale documentation (ie 90 days of unchanged `.md` file) and warns developers on maintaining their documentation.
 
 # Usage
 

@@ -1,7 +1,7 @@
 version: 2.1
 
 description: >
-  Find stale documentation through CI.
+  Find stale documentation through CI. `stale-md` is a CircleCI orb that identifies stale documentation (ie 90 days of unchanged `.md` file) and warns developers on maintaining their documentation.
 
 display:
   source_url: "https://github.com/mkotsollaris/stale-md.git"
