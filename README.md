@@ -1,6 +1,6 @@
 # Orb Template
 
-[![CircleCI](https://dl.circleci.com/status-badge/img/gh/mkotsollaris/readme-update-check/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/mkotsollaris/readme-update-check/tree/main)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/mkotsollaris/stale-md/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/mkotsollaris/stale-md/tree/main)
 
 Find stale documentation through CI.
 
@@ -44,7 +44,11 @@ This orb aims to treat documentation as a first-class citizen, similar to produc
 # License
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 [MIT](./LICENSE)
 =======
 [MIT](./LICENSE)
 >>>>>>> 960bbf0 (transfer)
+=======
+[MIT](./LICENSE)
+>>>>>>> 959ab19 (retrigger)
