@@ -1,6 +1,6 @@
 version: 2.1
 orbs:
-  stale-md: mkotsollaris/stale-md@dev:<<pipeline.git.revision>>
+  stale-md: mkotsollaris/stale-md@0.0.3
   orb-tools: circleci/orb-tools@11.1
 
 filters: &filters
