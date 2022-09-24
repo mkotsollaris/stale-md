@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "src",
+			"path": "."
+		},
+		{
+			"name": "stale-md",
+			"path": "../../stale-md"
+		}
+	],
+	"settings": {}
+}

@@ -1,39 +1,46 @@
 # Orb Template
 
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/mkotsollaris/readme-update-check/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/mkotsollaris/readme-update-check/tree/main)
 
-[![CircleCI Build Status](https://circleci.com/gh/mkotsollaris/stale-md.svg?style=shield "CircleCI Build Status")](https://circleci.com/gh/mkotsollaris/stale-md) [![CircleCI Orb Version](https://badges.circleci.com/orbs/mkotsollaris/stale-md.svg)](https://circleci.com/orbs/registry/orb/mkotsollaris/stale-md) [![GitHub License](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/mkotsollaris/stale-md/master/LICENSE) [![CircleCI Community](https://img.shields.io/badge/community-CircleCI%20Discuss-343434.svg)](https://discuss.circleci.com/c/ecosystem/orbs)
+Find stale documentation through CI.
 
+`stale.md` is a CircleCI orb that identifies stale documentation (ie 90 days of unchanged `.md` file) and warns developers on maintaining their documentation.
 
+# Usage
 
-A project template for Orbs.
+```bash
+@orb reference TBD
 
-This repository is designed to be automatically ingested and modified by the CircleCI CLI's `orb init` command.
+description: >
+  Identify Stale Documentation
+steps:
+  - stale.md/scan
+```
 
-_**Edit this area to include a custom title and description.**_
+# Options
 
----
+```bash
+parameters:
+  IGNORED_FILES:
+    type: string
+    default: "./.github/PULL_REQUEST_TEMPLATE/PULL_REQUEST.md"
+    description: "files to be ignored (space-separated)"
+  DAYS_THRESHOLD:
+    type: string
+    default: "90"
+    description: "Time threshold in days"
+```
 
-## Resources
+[Example here](./src/commands/scan.yml).
 
-[CircleCI Orb Registry Page](https://circleci.com/orbs/registry/orb/mkotsollaris/stale-md) - The official registry page of this orb for all versions, executors, commands, and jobs described.
+# Motivation
 
-[CircleCI Orb Docs](https://circleci.com/docs/2.0/orb-intro/#section=configuration) - Docs for using, creating, and publishing CircleCI Orbs.
+Inspired by [Software Engineering at Google](https://www.goodreads.com/book/show/48816586-software-engineering-at-google), where there was a reference that Google runs a similar pattern internally to embrace continuous software engineering developments and constantly update their documentation.
 
-### How to Contribute
+By utilizing this orb command, developers are reminded that while their software updates so does their documentation.
 
-We welcome [issues](https://github.com/mkotsollaris/stale-md/issues) to and [pull requests](https://github.com/mkotsollaris/stale-md/pulls) against this repository!
+This orb aims to treat documentation as a first-class citizen, similar to production level code where documentation is always remaining up to date.
 
-### How to Publish An Update
-1. Merge pull requests with desired changes to the main branch.
-    - For the best experience, squash-and-merge and use [Conventional Commit Messages](https://conventionalcommits.org/).
-2. Find the current version of the orb.
-    - You can run `circleci orb info mkotsollaris/stale-md | grep "Latest"` to see the current version.
-3. Create a [new Release](https://github.com/mkotsollaris/stale-md/releases/new) on GitHub.
-    - Click "Choose a tag" and _create_ a new [semantically versioned](http://semver.org/) tag. (ex: v1.0.0)
-      - We will have an opportunity to change this before we publish if needed after the next step.
-4.  Click _"+ Auto-generate release notes"_.
-    - This will create a summary of all of the merged pull requests since the previous release.
-    - If you have used _[Conventional Commit Messages](https://conventionalcommits.org/)_ it will be easy to determine what types of changes were made, allowing you to ensure the correct version tag is being published.
-5. Now ensure the version tag selected is semantically accurate based on the changes included.
-6. Click _"Publish Release"_.
-    - This will push a new tag and trigger your publishing pipeline on CircleCI.
+# License
+
+[MIT](./LICENSE)
