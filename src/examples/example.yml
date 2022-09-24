@@ -1,13 +1,24 @@
 description: >
-  Sample example description.
-# Provide a use-case based example for using this orb.
-# Everything in the `usage` section will be displayed in the orb registry.
-# Comments are not retained.
+  `stale-md/scan` usage:
 usage:
   version: 2.1
-  orbs:
-    <orb-name>: <namespace>/<orb-name>@1.2.3
-  workflows:
-    use-my-orb:
-      jobs:
-        - <orb-name>/<job-name>
+
+orbs:
+  stale-md: mkotsollaris/stale-md@0.0.3
+  orb-tools: circleci/orb-tools@11.1
+
+jobs:
+  scan:
+    docker:
+      - image: cimg/base:current
+    environment:
+      IGNORED_FILES: "./.github/PULL_REQUEST_TEMPLATE/PULL_REQUEST.md EXAMPLE.md" # declare files to be ignored during scan
+      DAYS_THRESHOLD: 50 # this overrides the default value of 90 days
+    steps:
+      - checkout
+      - stale-md/scan
+
+workflows:
+  main:
+    jobs:
+      - scan

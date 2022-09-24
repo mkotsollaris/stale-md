@@ -9,12 +9,24 @@ Find stale documentation through CI.
 # Usage
 
 ```bash
-@orb reference TBD
+version: 2.1
 
-description: >
-  Identify Stale Documentation
-steps:
-  - stale.md/scan
+orbs:
+  stale-md: mkotsollaris/stale-md@0.0.3
+  orb-tools: circleci/orb-tools@11.1
+
+jobs:
+  scan:
+    docker:
+      - image: cimg/base:current
+    steps:
+      - checkout
+      - stale-md/scan
+
+workflows:
+  main:
+    jobs:
+      - scan
 ```
 
 # Options
