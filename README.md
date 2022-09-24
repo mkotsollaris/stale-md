@@ -1,4 +1,4 @@
-# Orb Template
+# stale-md
 
 [![CircleCI](https://dl.circleci.com/status-badge/img/gh/mkotsollaris/stale-md/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/mkotsollaris/stale-md/tree/main)
 
