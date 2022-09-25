@@ -8,7 +8,7 @@ Find stale documentation through CI.
 
 # Usage
 
-```bash
+```yml
 version: 2.1
 
 orbs:
@@ -31,7 +31,7 @@ workflows:
 
 # Options
 
-```bash
+```yml
 parameters:
   IGNORED_FILES:
     type: string
@@ -49,9 +49,7 @@ parameters:
 
 Inspired by [Software Engineering at Google](https://www.goodreads.com/book/show/48816586-software-engineering-at-google), where there was a reference that Google runs a similar pattern internally to embrace continuous software engineering developments and constantly update their documentation.
 
-By utilizing this orb command, developers are reminded that while their software updates so does their documentation.
-
-This orb aims to treat documentation as a first-class citizen, similar to production level code where documentation is always remaining up to date.
+By utilizing this orb command, developers are reminded that while their software updates so does their documentation. This orb aims to treat documentation as a first-class citizen, similar to production level code where documentation is always remaining up to date.
 
 # License
 
