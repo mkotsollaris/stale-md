@@ -1,25 +1,11 @@
 description: >
-  `stale-md/scan` usage
-
+  `stale-md/scan` usage example
 usage:
   version: 2.1
-
 orbs:
-  stale-md: mkotsollaris/stale-md@0.0.3
+  stale-md: mkotsollaris/stale-md@LATEST_VERSION
   orb-tools: circleci/orb-tools@11.1
-
-jobs:
-  scan:
-    docker:
-      - image: cimg/base:current
-    environment:
-      IGNORED_FILES: "./.github/PULL_REQUEST_TEMPLATE/PULL_REQUEST.md EXAMPLE.md" # declare files to be ignored during scan
-      DAYS_THRESHOLD: 50 # this overrides the default value of 90 days
-    steps:
-      - checkout
-      - stale-md/scan
-
 workflows:
   main:
     jobs:
-      - scan
+      - stale-md/scan
