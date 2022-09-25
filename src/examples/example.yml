@@ -2,10 +2,10 @@ description: >
   `stale-md/scan` usage example
 usage:
   version: 2.1
-orbs:
-  stale-md: mkotsollaris/stale-md@LATEST_VERSION
-  orb-tools: circleci/orb-tools@11.1
-workflows:
-  main:
-    jobs:
-      - stale-md/scan
+  orbs:
+    stale-md: mkotsollaris/stale-md@0.0.8
+    orb-tools: circleci/orb-tools@11.1
+  workflows:
+    main:
+      jobs:
+        - stale-md/scan
