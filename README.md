@@ -51,6 +51,10 @@ Inspired by [Software Engineering at Google](https://www.goodreads.com/book/show
 
 By utilizing this orb command, developers are reminded that while their software updates so does their documentation. This orb aims to treat documentation as a first-class citizen, similar to production level code where documentation is always remaining up to date.
 
+# Resources
+
+- [Documentation - "Software Engineering at Google" Chapter Review](https://menelaos.dev/documentation-google-swe-book/)
+
 # License
 
 [MIT](./LICENSE)
